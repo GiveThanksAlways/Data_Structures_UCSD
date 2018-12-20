@@ -5,6 +5,7 @@
 using std::string;
 using std::vector;
 using std::cin;
+using namespace std;
 
 struct Query {
     string type, name;
@@ -30,10 +31,24 @@ void write_responses(const vector<string>& result) {
         std::cout << result[i] << "\n";
 }
 
+int hash_function_h(int x){
+	// ((ax + b) mod p) mod m)
+	// 1 <= a <= p-1
+	// 0 <= b <= p-1
+	// m is hashtable size
+	int a = 34;
+	int b = 2;
+	int m = 1000;
+	int p = 10000019; // prime number larger than biggest phone number
+	return ((a*x+b) % p) % m;
+
+}
+
 vector<string> process_queries(const vector<Query>& queries) {
     vector<string> result;
     // Keep list of all existing (i.e. not deleted yet) contacts.
     vector<Query> contacts;
+	
     for (size_t i = 0; i < queries.size(); ++i)
         if (queries[i].type == "add") {
             bool was_founded = false;
