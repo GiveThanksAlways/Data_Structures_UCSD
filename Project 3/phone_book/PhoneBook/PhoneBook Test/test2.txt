@@ -1,0 +1,29 @@
+26
+add 123 spencer
+add 111 tyler
+add 222 jason
+add 333 mel
+add 444 ralph
+add 555 h
+add 666 i
+add 777 j
+add 888 k
+add 999 m
+add 100 n
+add 130 o
+add 140 p
+find 123 
+find 111 
+find 222 
+find 333 
+find 444 
+find 555 
+find 666 
+find 777 
+find 888
+find 999 
+find 100 
+find 130 
+find 140 
+
+
